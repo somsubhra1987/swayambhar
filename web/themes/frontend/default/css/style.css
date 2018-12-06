@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{ width:100%; margin:0px; padding:0px; font-family:Arial, Helvetica, sans-serif; color:#000; font-size:12px;}
+
+.m--t-0 {
+	margin-top:0px !important;
+}
+
+.m--t-15 {
+	margin-top:15px !important;
+}
+
+.m--t-20 {
+	margin-top:20px !important;
+}
+
+.m--t-30 {
+	margin-top:30px !important;
+}
+
+.m--t-50 {
+	margin-top:50px !important;
+}
+
+.m--b-30 {
+	margin-bottom: 30px !important;
+}
+
+.m--r-10 {
+	margin-right: 10px !important;
+}
+
+.p--r-0 {
+	padding-right:0px !important;
+}
+
+.p--l-0 {
+	padding-left:0px !important;
+}
+
+.bg-gray {
+	background:#d2d6de;
+}
+
+.text-left {
+	text-align:left !important;
+}
+
+.navbar {
+	border:none;
+	margin-bottom:0;
+	background:#061827;
+	border-radius:0;
+}
+
+.navbar .navbar-toggle {
+    border-color: #061827;
+}
+
+.navbar .navbar-toggle .icon-bar {
+    background-color: #FF854A;
+}
+
+.navbar-brand {
+	height:80px;
+	padding-top:0;
+}
+
+.navbar-brand img {
+	width:150px;
+}
+
+/*.navbar-nav li {
+	height:80px;
+}*/
+
+.navbar-nav li a {
+	display:inline-block;
+	font-size:16px;
+	/*font-weight:bold;*/
+	padding:30px 10px;
+	color:#ffffff;
+	text-decoration:none;
+}
+
+.navbar-nav li a.active,.navbar-nav li a:hover {
+	color:#FF854A;
+	background-color:#eee;
+}
+
+.user-action li a {
+	 font-size:12px !important;
+}
+
+.user-action li a.active, .user-action li a:active, .user-action li a:hover, .user-action li a:focus{
+	background:transparent !important;
+}
+
+.nav.logged-user-action .open > a, .logged-user-action li a:focus, .text-orange {
+	color:#FF854A;
+}
+
+.logged-user-action li ul li a {
+	color:#000;
+	font-weight:normal;
+	display: block;
+	padding: 10px 20px;
+	clear: both;
+	font-weight: 400;
+	line-height: 1.42857143;
+}
+
+.logged-user-action li a:hover .cart-badge,
+.logged-user-action li a:focus .cart-badge,
+.logged-user-action li a:active .cart-badge {
+	background-color:#fff;
+	color:#000;
+	border:1px solid #FF854A;
+}
+
+.dropdown-menu .divider {
+	margin:0;
+}
+
+.user-action .separater {
+	color:#ffffff;
+	padding-top:30px;
+}
+
+.cart-badge {
+	position: absolute;
+	top: -9px;
+	left: 7px;
+	background-color: #FF854A;
+	border: 1px solid #fff;
+	padding: 0px 5px 2px 4px;
+	font-weight:normal;
+}
+
+@media (max-width:767px) {
+	.navbar-brand {
+		height:50px;
+	}
+
+	.navbar-brand img {
+		width: 115px;
+	}
+	
+	.navbar-nav li {
+		height:50px;
+	}
+	
+	.navbar-nav li a {
+		padding:15px 10px;
+	}
+}
+
+.footerSection {
+    background: #061827;
+    position: relative;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.footerBx h2 {
+    color: #FFFFFF;
+    padding: 0;
+    font-size: 1.8rem;
+	text-align:center;
+}
+
+.line {
+    background-color: #ddd;
+    display: inline-block;
+    height: 1px;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.form-group {
+    margin-bottom: 5px;
+}
+
+#register-form .radio {
+	display:inline-block;
+	margin-bottom:0px;
+	margin-top:0px;
+	margin-right:10px;
+}
