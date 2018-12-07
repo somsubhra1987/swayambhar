@@ -9,7 +9,7 @@ use app\lib\Core;
         
             <div class="col-md-12 col-sm-12 col-xs-12 footerBlog">
                 <div class="footerBx Bx3">
-                    <h2>Copyright &copy; <?php echo date('Y'); ?> <strong>abc</strong></h2>
+                    <h2>Copyright &copy; <?php echo date('Y'); ?> <strong><?php echo Yii::$app->name; ?></strong></h2>
                 </div>
 			</div>
         </div>

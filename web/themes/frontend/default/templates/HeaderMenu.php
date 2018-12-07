@@ -40,14 +40,24 @@ $loggedCustomerDetail = Core::getLoggedCustomer();
                                 <span class="caret"></span>
                             </a>
                             <ul class="dropdown-menu user-action-menu" aria-labelledby="drop3">
-                                <li><?php echo Html::a('<span class="glyphicon glyphicon-user text-orange m--r-10"></span> My Profile',['/customer/profile'], ['class' => Core::getActiveClass(false, 'customer', 'profile')]);?></li>
+                                <li><?php echo Html::a('<span class="fa fa-user text-orange m--r-10"></span> My Profile',['/customer/profile'], ['class' => Core::getActiveClass(false, 'customer', 'profile')]);?></li>
                                 <li role="separator" class="divider"></li>
-                                <li><?php echo Html::a('<span class="glyphicon glyphicon-th-list text-orange m--r-10"></span> Orders',['/order/'], ['class' => Core::getActiveClass(false, 'order', 'index')]);?></li>
+                                <li><?php echo Html::a('<span class="fa fa-th-list text-orange m--r-10"></span> Transaction Details',['/order/'], ['class' => Core::getActiveClass(false, 'order', 'index')]);?></li>
                                 <li role="separator" class="divider"></li>
-                                <li><?php echo Html::a('<span class="glyphicon glyphicon-off text-orange m--r-10"></span> Logout',['logout'], ['class' => Core::getActiveClass(false, 'site', 'logout')]);?></li>
+                                <li><?php echo Html::a('<span class="fa fa-book text-orange m--r-10"></span> Order Text Book',['/order/create'], ['class' => Core::getActiveClass(false, 'order', 'create')]);?></li>
+                                <li role="separator" class="divider"></li>
+                                <li><?php echo Html::a('<span class="fa fa-key text-orange m--r-10"></span> Change Password',['/customer/changepassword'], ['class' => Core::getActiveClass(false, 'customer', 'changepassword')]);?></li>
+                                <li role="separator" class="divider"></li>
+                                <li><?php echo Html::a('<span class="fa fa-power-off text-orange m--r-10"></span> Logout',['/logout'], ['class' => Core::getActiveClass(false, 'site', 'logout')]);?></li>
                             </ul>
                         </li>
-                        <li><?php echo Html::a('<span class="glyphicon glyphicon-shopping-cart"><span class="badge cart-badge">1</span></span> Cart',['/cart/index'], ['class' => Core::getActiveClass(false, 'cart', 'index')]);?></li>
+                        <li>
+							<?php
+                            	$totalItemsInCart = 0;
+								$cartBadge = ($totalItemsInCart > 0) ? '<span class="fa fa-shopping-cart position-relative"><span class="badge cart-badge">'.$totalItemsInCart.'</span></span>' : '<span class="fa fa-shopping-cart position-relative"></span>';
+								echo Html::a($cartBadge.' Cart',['/cart/index'], ['class' => Core::getActiveClass(false, 'cart', 'index')]);
+							?>
+                        </li>
                     </ul>
                 <?php } ?>
             </div><!-- /.navbar-collapse -->

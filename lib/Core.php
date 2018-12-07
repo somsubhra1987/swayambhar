@@ -62,6 +62,27 @@ class Core
 		
 	    return $customer;
 	}
+	
+	public function isActiveCustomer()
+	{
+		$customerID  = self::getLoggedCustomerID();
+		if($customerID > 0)
+		{
+			$activeStatus = self::getData("SELECT isActive FROM cust_customer WHERE customerID = '$customerID'");
+			if($activeStatus == 1)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
 
 	public function getUploadedPath()
 	{

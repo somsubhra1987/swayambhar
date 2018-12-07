@@ -2,8 +2,9 @@
 namespace app\lib;
 
 use Yii;
+use app\lib\Core;
 
-class AdminAccessRule extends \yii\filters\AccessRule
+class UserAccessRule extends \yii\filters\AccessRule
 {
 
     /** @inheritdoc */
@@ -15,7 +16,7 @@ class AdminAccessRule extends \yii\filters\AccessRule
 
         foreach ($this->roles as $role) {
             if ($role === 'user') {
-                if (isset(Yii::$app->session['loggedUserID']) && Yii::$app->session['loggedUserID'] > 0) {
+                if (Core::getLoggedCustomerID() && Core::isActiveCustomer()) {
                     return true;
                 }
             }

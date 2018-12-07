@@ -35,6 +35,7 @@ if($customerModel->isNewRecord)
                 <?php $form = ActiveForm::begin([
                     'id' => 'login-form',
                     'layout' => 'horizontal',
+					'action'=> Yii::$app->urlManager->createUrl(['site/login']),
                     'fieldConfig' => [
                         'template' => "{label}\n<div class=\"col-lg-9\">{input}{error}</div>",
                         'labelOptions' => ['class' => 'col-lg-3 control-label text-left'],
